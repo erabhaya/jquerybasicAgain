@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        table{border: 2px solid blue; width: 50%; height: 100px; margin: auto;}
+        tr{border: 2px solid blue;}
+        th{border: 2px solid blue;}
+        td{border: 2px solid blue;}
+    </style>
+    <title>product</title>
+</head>
+<body>
+    <div class="product">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Color/Size</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>HP</td>
+            <td>
+              <select id="size" >
+                <option value="small">Small</option>
+                <option value="med">Medium</option>
+              </select>
+            </td>
+            <td id="rs">10000</td>
+          </tr>
+          <tr>
+            <td>Dell</td>
+            <td>
+              <select id="color" >
+                <option value="silver">Silver</option>
+                <option value="black">black</option>
+              </select>
+            </td>
+            
+            <td id="colorRS">25000</td>
+          </tr>
+          <tr>
+            <td>Acer</td>
+            <td>
+              <select id="colorAcer" >
+                <option value="silver">Silver</option>
+                <option value="black">black</option>
+              </select>
+            </td>
+            
+            <td id="acerColorRS">28000</td>
+          </tr>
+          
+        </table>
+      </div>
+    <script>
+       $("#size").change(() => {
+    var val = $("#size").val();
+    $("#rs").empty();
+    if (val == "med") {
+      $("#rs").append("20000");
+    } else {
+      $("#rs").append("10000");
+    }
+  });
+
+  $("#color").change(() => {
+    var val = $("#color").val();
+    $("#colorRS").empty();
+    if (val == "black") {
+      $("#colorRS").append("25000");
+    } else {
+      $("#colorRS").append("12000");
+    }
+  });
+  $("#colorAcer").change(() => {
+    var val = $("#color").val();
+    $("#acerColorRS").empty();
+    if (val == "black") {
+      $("#acerColorRS").append("28000");
+    } else {
+      $("#acerColorRS").append("32000");
+    }
+  });
+    </script>
+    
+</body>
+</html>

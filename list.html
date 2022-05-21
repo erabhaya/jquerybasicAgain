@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists and sub-lists</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <h2>Product List</h2>
+        <ul id="complete_ul">
+          <li><a href="">Cloths</a><button id="li_1">+</button></li>
+
+          <li>
+            <ul id="li-cloth">
+              <li><a href="">T-shirt</a><button class="cloth-li">+</button> </li>
+              <li><a href="">Trouser</a><button class="cloth-lit">+</button> </li>
+            </ul>
+          </li>
+          <li><a href="">Electronics</a><button id="li_2">+</button></li>
+          <li>
+            <ul id="li-add-ele">
+              <li><a href="">Mobiles</a><button class="mobile">+</button></li>
+              <li><a href="">Tabs</a><button class="electronics-li">+</button></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+      <script>
+          $(".cloth-li").click(()=>{
+       $("#li-cloth").append(`<li><a href="">POLO</a><button class="cloth-li">+</button> </li>`)
+     });
+
+     $(".cloth-lit").click(()=>{
+       $("#li-cloth").append(`<li><a href="">Jeans</a><button class="cloth-li">+</button> </li>`)
+     });
+
+
+     $(".mobile").click(()=>{
+      $("#li-add-ele").append(`<li><a href="">Samsung</a><button class="electronics-ul">+</button></li>`)
+    });
+
+    $(".electronics-li").click(()=>{
+      $("#li-add-ele").append(`<li><a href="">SamTab</a><button class="electronics-ul">+</button></li>`)
+    });
+
+    $("#li_1").click(()=>{
+      $("#complete_ul").append(` <li><a href="">Cloths</a><button id="li_1">+</button></li>
+      <li>
+        <ul id="li-cloth">
+          <li><a href="">T-shirt</a><button class="cloth-li">+</button> </li>
+          <li><a href="">Trouser</a><button class="cloth-li">+</button> </li>
+        </ul>
+      </li>`)
+    });
+
+    $("#li_2").click(()=>{
+      $("#complete_ul").append(`<li><a href="">Electronics</a><button id="electronics-ul">+</button></li>
+      <li>
+        <ul id="li-add-ele">
+          <li><a href="">Mobiles</a><button class="electronics-li">+</button></li>
+          <li><a href="">Tabs</a><button class="electronics-li">+</button></li>
+        </ul>
+      </li>
+    </ul>`)
+    });
+      </script>
+</body>
+</html>
